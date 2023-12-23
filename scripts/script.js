@@ -3,15 +3,12 @@ let login = document.getElementById("btn");
 
 function toggle() {
   if (login.innerText === "Login") {
+    login.innerText = "Login";
     alert("Please Login First");
     return;
   }
 
-  if (popup.style.display === "none") {
-    popup.style.display = "flex";
-  } else {
-    popup.style.display = "none";
-  }
+  popup.style.display = popup.style.display === "none" ? "flex" : "none";
 }
 
 let cls = document.querySelector(".close");
